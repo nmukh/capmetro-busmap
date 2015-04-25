@@ -15,7 +15,9 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  'styles/**/*.css'
+  'styles/**/*.css',
+  'bower_components/leaflet/dist/leaflet.css',
+  'bower_components/angular-material/angular-material.css',
 ];
 
 
@@ -23,14 +25,14 @@ var cssFilesToInject = [
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFilesToInject = [
   
-  // Load sails.io before everything else
-  'js/dependencies/sails.io.js',
-
-  // Dependencies like jQuery, or Angular are brought in here
+  //'js/dependencies/sails.io.js',
   'js/dependencies/**/*.js',
-
-  // All of the rest of your client-side js files
-  // will be injected here in no particular order.
+  'bower_components/angular/angular.min.js',
+  'bower_components/leaflet/dist/leaflet.js',
+  'bower_components/angular-animate/angular-animate.min.js',
+  'bower_components/angular-aria/angular-aria.min.js',
+  'bower_components/angular-material/angular-material.min.js',
+  'bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.min.js',
   'js/**/*.js'
 ];
 
