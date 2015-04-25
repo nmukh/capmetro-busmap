@@ -10,10 +10,11 @@ app.controller('mapController',['$scope','$http',function($scope,$http){
     	$scope.markers = [];
     	data.forEach(function(bus){
     		locationTemp = bus.location.split(',');
+            vehicleId = bus.vehicleid
     		$scope.markers.push({
     			lat : parseFloat(locationTemp[0]),
     			lng : parseFloat(locationTemp[1]),
-    			message : 'fuk'
+    			message : vehicleId
     		});
     	});
     });
