@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "debug": "node debug app.js"
+    "debug": "node debug app.js",
     "postinstall": "bower install"
   },
   "main": "app.js",
