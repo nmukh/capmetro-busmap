@@ -1,1 +1,1 @@
-var app = angular.module('capmetro-busmap',['ngMaterial','leaflet-directive']); 
+var app = angular.module('capmetro-busmap',['ngMaterial','leaflet-directive', 'geolocation']); 

@@ -33,6 +33,7 @@ var jsFilesToInject = [
   'bower_components/angular-aria/angular-aria.min.js',
   'bower_components/angular-material/angular-material.min.js',
   'bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.min.js',
+  'bower_components/angularjs-geolocation/src/geolocation.js',
   'js/**/*.js'
 ];
 
