@@ -1,4 +1,4 @@
-app.controller('mapController',['$scope','$http', '$timeout', 'geolocation', function($scope,$http,$timeout, geolocation){
+app.controller('mapController',['$scope','$http', '$timeout', 'geolocation','leafletData', function($scope,$http,$timeout, geolocation,leafletData){
     
     geolocation.getLocation().then(function(data) {
         $scope.coords = {latitude:data.coords.latitude, longitude:data.coords.longitude};
@@ -35,5 +35,20 @@ app.controller('mapController',['$scope','$http', '$timeout', 'geolocation', fun
         }, 3000)
       };
 
+    $http.get("cmta_fixed_routes.json").success(function(data, status) {
+        console.log(data);
+        $scope.geojson = {
+            data: data,
+            style: {
+                //fillColor: "green",
+                weight: 2,
+                opacity: 1,
+                color: 'red',
+                dashArray: '3',
+                //fillOpacity: 0.7
+            }
+        }
+
+    });
     $scope.intervalFunction();
 }]);
